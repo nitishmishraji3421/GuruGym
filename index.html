@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#090b0b">
+  <meta name="color-scheme" content="dark">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="description" content="Guru Gym — premium fitness community in Sakchi, Jamshedpur. Train stronger, move better, become your best.">
+  <meta property="og:title" content="Guru Gym | Sakchi, Jamshedpur">
+  <meta property="og:description" content="Train with purpose. Get stronger. Stay disciplined.">
+  <meta property="og:type" content="website">
+  <title>Guru Gym | Train Stronger · Sakchi, Jamshedpur</title>
+  <link rel="icon" href="assets/guru-gym-logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/icon-192.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader-mark"><img src="assets/guru-gym-logo.png" alt=""></div>
+    <div class="preloader-line"><span></span></div>
+    <p>LOADING THE GURU STANDARD</p>
+  </div>
+
+  <div class="topbar">
+    <div class="topbar-left"><span class="status-dot"></span> SAKCHI · JAMSHEDPUR</div>
+    <div class="topbar-center">TRAIN HARD · STAY CONSISTENT · BECOME STRONGER</div>
+    <a href="tel:+916206502611" class="topbar-phone">+91 6206 502611</a>
+  </div>
+
+  <header class="site-header" id="siteHeader">
+    <a href="#home" class="brand" aria-label="Guru Gym home">
+      <span class="brand-mark"><img src="assets/guru-gym-logo.png" alt="Guru Gym logo"></span>
+      <span class="brand-word"><strong>GURU</strong><b>GYM</b><small>JAMSHEDPUR</small></span>
+    </a>
+
+    <nav class="desktop-nav" id="desktopNav" aria-label="Primary navigation">
+      <a href="#about">About</a>
+      <a href="#programs">Training</a>
+      <a href="#experience">Experience</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#pricing">Membership</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Visit</a>
+    </nav>
+
+    <div class="header-actions">
+      <a class="icon-link" href="https://wa.me/916206502611?text=Hi%20Guru%20Gym%2C%20I%20want%20to%20know%20about%20membership%20plans." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">WA</a>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+      <a class="button button-small button-accent magnetic" href="#pricing">JOIN NOW <span>↗</span></a>
+    </div>
+
+    <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+      <div class="mobile-drawer-inner">
+        <div class="mobile-eyebrow">GURU GYM · SAKCHI</div>
+        <a href="#about">01 / ABOUT</a>
+        <a href="#programs">02 / TRAINING</a>
+        <a href="#experience">03 / EXPERIENCE</a>
+        <a href="#gallery">04 / GALLERY</a>
+        <a href="#pricing">05 / MEMBERSHIP</a>
+        <a href="#reviews">06 / REVIEWS</a>
+        <a href="#contact">07 / VISIT US</a>
+        <a href="gallery.html">08 / UPLOAD Media</a>
+        <div class="mobile-actions">
+          <a class="button button-accent" href="#pricing">VIEW MEMBERSHIPS →</a>
+          <a class="button button-outline" href="tel:+916206502611">CALL THE GYM</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-media" aria-hidden="true">
+        <div class="hero-image"></div>
+        <div class="hero-vignette"></div>
+        <div class="hero-grid"></div>
+        <div class="hero-orb hero-orb-one"></div>
+        <div class="hero-orb hero-orb-two"></div>
+      </div>
+
+      <div class="hero-watermark" aria-hidden="true"><img src="assets/guru-gym-logo.png" alt=""></div>
+
+      <div class="hero-content page-shell">
+        <div class="eyebrow reveal">JAMSHEDPUR'S FITNESS COMMUNITY <i></i></div>
+        <h1 class="hero-title reveal delay-1">YOUR<br><span>STRONGER</span><br>SELF.</h1>
+        <p class="hero-copy reveal delay-2">A serious training environment for people who want to get stronger, move better and stay consistent — without the unnecessary noise.</p>
+
+        <div class="hero-cta reveal delay-3">
+          <a class="button button-accent button-large magnetic" href="#pricing">START TRAINING <span>→</span></a>
+          <a class="button button-glass button-large" href="#experience">SEE THE GYM <span>↘</span></a>
+        </div>
+
+        <div class="hero-meta reveal delay-4">
+          <div><strong>4.6</strong><span>/5</span><small>Google rating</small></div>
+          <div><strong data-count="127">0</strong><span>+</span><small>Reviews</small></div>
+          <div><strong>11</strong><span>PM</span><small>Closes daily</small></div>
+        </div>
+      </div>
+
+      <div class="hero-side-label">BUILD · GRIND · BECOME</div>
+      <a class="hero-scroll" href="#about"><span></span>SCROLL TO EXPLORE</a>
+    </section>
+
+    <section class="ticker" aria-label="Gym values">
+      <div class="ticker-track">
+        <span>STRENGTH</span><b>•</b><span>DISCIPLINE</span><b>•</b><span>CONSISTENCY</span><b>•</b><span>RESULTS</span><b>•</b>
+        <span>STRENGTH</span><b>•</b><span>DISCIPLINE</span><b>•</b><span>CONSISTENCY</span><b>•</b><span>RESULTS</span><b>•</b>
+      </div>
+    </section>
+
+    <section class="section section-about page-shell" id="about">
+      <div class="section-kicker reveal">01 / THE GURU STANDARD</div>
+      <div class="split-heading">
+        <h2 class="display reveal">MORE THAN<br><em>A WORKOUT.</em></h2>
+        <div class="copy-block reveal delay-1">
+          <p class="lead">Guru Gym is built for people who are serious about becoming stronger, healthier and more confident.</p>
+          <p>Located on the 3rd Floor of Thakur Bari Road in Sakchi, Guru Gym offers a motivating training atmosphere with a wide variety of well-maintained equipment suitable for different fitness levels.</p>
+          <p>Whether you're starting your fitness journey or pushing for your next milestone, our team is here to help you train with consistency and purpose.</p>
+          <a class="text-arrow" href="#contact">VISIT GURU GYM <span>↗</span></a>
+        </div>
+      </div>
+
+      <div class="about-stats reveal delay-2">
+        <div><span>LOCATION</span><strong>SAKCHI</strong><small>Jamshedpur</small></div>
+        <div><span>FLOOR</span><strong>03</strong><small>Thakur Bari Road</small></div>
+        <div><span>FOCUS</span><strong>CONSISTENCY</strong><small>Train with intent</small></div>
+        <div><span>VIBE</span><strong>NO EXCUSES</strong><small>Just show up</small></div>
+      </div>
+    </section>
+
+    <section class="section goals-section page-shell" id="goals">
+      <div class="section-headline reveal">
+        <div class="section-kicker">02 / YOUR GOAL</div>
+        <h2 class="display">TRAIN FOR<br><em>YOUR WHY.</em></h2>
+        <p>Choose the result you're working toward. The interface adapts with a simple direction for your next training phase.</p>
+      </div>
+
+      <div class="goal-layout reveal delay-1">
+        <div class="goal-tabs" role="tablist" aria-label="Fitness goals">
+          <button class="goal-tab active" role="tab" aria-selected="true" data-goal="strength" type="button"><span>01</span> STRENGTH</button>
+          <button class="goal-tab" role="tab" aria-selected="false" data-goal="fatloss" type="button"><span>02</span> FAT LOSS</button>
+          <button class="goal-tab" role="tab" aria-selected="false" data-goal="muscle" type="button"><span>03</span> MUSCLE</button>
+          <button class="goal-tab" role="tab" aria-selected="false" data-goal="fitness" type="button"><span>04</span> FITNESS</button>
+        </div>
+        <div class="goal-panel" id="goalPanel">
+          <div class="goal-number" id="goalNumber">01</div>
+          <div class="goal-copy">
+            <span class="goal-kicker" id="goalKicker">BUILD A STRONG BASE</span>
+            <h3 id="goalTitle">STRENGTH<br><em>TRAINING.</em></h3>
+            <p id="goalText">Build foundational strength with consistent resistance training, progressive overload and disciplined sessions.</p>
+            <div class="goal-tags" id="goalTags"><span>WEIGHTS</span><span>RESISTANCE</span><span>PROGRESSION</span></div>
+            <a class="button button-accent" href="#pricing">START THIS PATH <span>→</span></a>
+          </div>
+          <div class="goal-visual" id="goalVisual" aria-hidden="true"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-training page-shell" id="programs">
+      <div class="section-headline split-head reveal">
+        <div><div class="section-kicker">03 / TRAINING</div><h2 class="display">TRAIN WITH<br><em>PURPOSE.</em></h2></div>
+        <p>From strength work to conditioning and personal guidance, the goal is simple: make each session count.</p>
+      </div>
+      <div class="card-grid-4">
+        <article class="program-card tilt reveal"><div class="card-num">01</div><div class="line-icon">+</div><h3>STRENGTH<br>TRAINING</h3><p>Build foundational strength with a broad selection of weights and resistance equipment.</p><span>WEIGHTS · FORM · PROGRESSION</span></article>
+        <article class="program-card tilt program-hot reveal delay-1"><div class="card-num">02</div><div class="line-icon">↗</div><h3>FAT LOSS &<br>CONDITIONING</h3><p>Improve fitness, movement and conditioning with focused, consistent training.</p><span>ENGINE · MOVEMENT · ROUTINE</span></article>
+        <article class="program-card tilt reveal delay-2"><div class="card-num">03</div><div class="line-icon">◎</div><h3>PERSONAL<br>GUIDANCE</h3><p>Get support and practical guidance from knowledgeable, motivating trainers.</p><span>COACHING · SUPPORT · FOCUS</span></article>
+        <article class="program-card tilt reveal delay-3"><div class="card-num">04</div><div class="line-icon">∞</div><h3>FITNESS<br>ROUTINE</h3><p>Build sustainable habits around training, recovery and your personal fitness goals.</p><span>CONSISTENCY · BALANCE · ENERGY</span></article>
+      </div>
+    </section>
+
+    <section class="feature-band" id="features">
+      <div class="page-shell feature-band-inner">
+        <div class="section-kicker reveal">04 / WHY GURU GYM</div>
+        <h2 class="display reveal">BUILT FOR<br><em>BETTER RESULTS.</em></h2>
+        <div class="feature-list">
+          <article class="feature-row reveal"><span>01</span><div><h3>COACH-LED GUIDANCE</h3><p>Practical support from knowledgeable trainers so your sessions stay focused and purposeful.</p></div><b>↗</b></article>
+          <article class="feature-row reveal delay-1"><span>02</span><div><h3>GOAL-BASED TRAINING</h3><p>Strength, fat loss, muscle building or general fitness — choose a direction and train with intent.</p></div><b>↗</b></article>
+          <article class="feature-row reveal delay-2"><span>03</span><div><h3>SMART FITNESS TOOLS</h3><p>Use the goal planner and quick BMI check to understand your starting point before you train.</p></div><b>↗</b></article>
+          <article class="feature-row reveal delay-3"><span>04</span><div><h3>FLEXIBLE MEMBERSHIPS</h3><p>Choose a membership duration that fits your training journey and rhythm.</p></div><b>↗</b></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section experience page-shell" id="experience">
+      <div class="split-head reveal">
+        <div><div class="section-kicker">05 / THE EXPERIENCE</div><h2 class="display">SEE THE<br><em>ENERGY.</em></h2></div>
+        <p>Train in a focused environment designed to keep your sessions purposeful, consistent and motivating.</p>
+      </div>
+      <div class="experience-grid">
+        <figure class="experience-card experience-main tilt reveal"><img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1500&q=86" alt="Gym training environment" loading="lazy"><figcaption><span>01</span> TRAIN HARD</figcaption></figure>
+        <figure class="experience-card experience-tall tilt reveal delay-1"><img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=1100&q=86" alt="Strength training" loading="lazy"><figcaption><span>02</span> STAY CONSISTENT</figcaption></figure>
+        <figure class="experience-card experience-wide tilt reveal delay-2"><img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=1200&q=86" alt="Fitness workout" loading="lazy"><figcaption><span>03</span> BECOME STRONGER</figcaption></figure>
+        <div class="experience-note reveal delay-3"><span>GURU GYM</span><strong>SHOW UP.</strong><p>Results begin with the sessions you actually complete.</p><a href="#pricing" class="text-arrow">START NOW <span>→</span></a></div>
+      </div>
+    </section>
+
+    <section class="public-gallery" id="gallery">
+      <div class="page-shell gallery-shell">
+        <div class="gallery-section-head reveal">
+          <div><div class="section-kicker">06 / GURU GYM WALL</div><h2 class="display">REAL MOMENTS.<br><em>REAL ENERGY.</em></h2></div>
+          <div><p>Training days, member wins, events and everyday Guru Gym energy — curated here for everyone to see.</p><a class="text-arrow" href="gallery.html">VIEW FULL GALLERY <span>↗</span></a></div>
+        </div>
+        <div class="public-gallery-grid reveal delay-1" id="publicGalleryGrid"></div>
+        <div class="gallery-empty" id="publicGalleryEmpty" hidden><h3>THE WALL IS WAITING.</h3><p>Published gym moments will appear here for everyone. Owners can upload and publish from the private Media Studio.</p><a class="button button-accent" href="gallery.html">OPEN PUBLIC GALLERY <span>→</span></a></div>
+        <div class="gallery-note"><span><strong>GALLERY</strong> · Published gym moments, members, events and reels for everyone.</span><span><strong>OWNER</strong> · <a href="gallery.html#owner-access">Upload & manage →</a></span></div>
+      </div>
+    </section>
+
+    <section class="section tools-section page-shell" id="tools">
+      <div class="tools-top reveal">
+        <div><div class="section-kicker">07 / SMART FITNESS</div><h2 class="display">KNOW YOUR<br><em>STARTING POINT.</em></h2></div>
+        <p>Simple tools to help you choose a direction and understand your baseline before you walk onto the floor.</p>
+      </div>
+      <div class="tool-grid">
+        <article class="tool-card tilt reveal"><div class="tool-icon">01</div><h3>CHOOSE YOUR GOAL</h3><p>Pick the result you're working toward and get a practical starting direction.</p><div class="goal-buttons"><button class="goal-choice" data-goal-tool="Strength" type="button">Build Strength</button><button class="goal-choice" data-goal-tool="Fat Loss" type="button">Fat Loss</button><button class="goal-choice" data-goal-tool="Muscle" type="button">Build Muscle</button><button class="goal-choice" data-goal-tool="Fitness" type="button">General Fitness</button></div><div class="tool-result" id="goalResult">Choose a goal to begin.</div></article>
+        <article class="tool-card tilt reveal delay-1"><div class="tool-icon">02</div><h3>QUICK BMI CHECK</h3><p>Use this as a general screening tool — not a medical diagnosis.</p><div class="bmi-form"><input id="weight" type="number" min="20" max="300" inputmode="decimal" placeholder="Weight · kg" aria-label="Weight in kilograms"><input id="height" type="number" min="100" max="250" inputmode="decimal" placeholder="Height · cm" aria-label="Height in centimeters"><button class="button button-accent" id="bmiButton" type="button">CHECK →</button></div><div class="tool-result" id="bmiResult">Enter your weight and height.</div></article>
+      </div>
+    </section>
+
+    <section class="pricing-section" id="pricing">
+      <div class="page-shell">
+        <div class="pricing-head reveal"><div><div class="section-kicker">08 / MEMBERSHIP</div><h2 class="display">CHOOSE YOUR<br><em>COMMITMENT.</em></h2></div><p>Simple plans. Clear pricing. Pick the duration that fits your training journey.</p></div>
+        <div class="pricing-grid">
+          <article class="price-card reveal"><div class="price-top"><span>01</span><b>STARTER</b></div><div class="price-duration">01<span>MO</span></div><h3>STARTER PACKAGE</h3><div class="price">₹1,100<small>+ ₹600 registration</small></div><p>Duration: 1 month</p><button class="price-cta plan-trigger" data-plan="Starter Package — ₹1,100 + ₹600 registration" type="button">GET STARTED <span>→</span></button></article>
+          <article class="price-card reveal delay-1"><div class="price-top"><span>02</span><b>STANDARD</b></div><div class="price-duration">03<span>MO</span></div><h3>STANDARD PACKAGE</h3><div class="price">₹2,700</div><p>Duration: 3 months</p><button class="price-cta plan-trigger" data-plan="Standard Package — ₹2,700" type="button">CHOOSE PLAN <span>→</span></button></article>
+          <article class="price-card featured-price reveal delay-2"><div class="popular">MOST POPULAR</div><div class="price-top"><span>03</span><b>PREMIUM</b></div><div class="price-duration">06<span>MO</span></div><h3>PREMIUM PACKAGE</h3><div class="price">₹4,600</div><p>Duration: 6 months</p><button class="price-cta plan-trigger" data-plan="Premium Package — ₹4,600" type="button">CHOOSE PLAN <span>→</span></button></article>
+          <article class="price-card reveal delay-1"><div class="price-top"><span>04</span><b>COUPLE</b></div><div class="price-duration">02<span>×</span></div><h3>COUPLE SPECIAL</h3><div class="price">₹4,000</div><p>Duration: 3 months</p><button class="price-cta plan-trigger" data-plan="Couple Special — ₹4,000" type="button">ENQUIRE <span>→</span></button></article>
+          <article class="price-card reveal delay-2"><div class="price-top"><span>05</span><b>ULTIMATE</b></div><div class="price-duration">12<span>MO</span></div><h3>ULTIMATE PACKAGE</h3><div class="price">₹8,000</div><p>Duration: 12 months</p><button class="price-cta plan-trigger" data-plan="Ultimate Package — ₹8,000" type="button">GO ULTIMATE <span>→</span></button></article>
+        </div>
+        <div class="pricing-foot reveal"><div><span class="foot-marker">!</span><div><strong>MEMBERSHIP NOTES</strong><p>Registration fees are non-refundable. Memberships are non-transferable. Bring your own towel & water bottle. Follow gym rules & safety guidelines.</p></div></div><a class="button button-accent" href="#contact">TALK TO THE GYM <span>↗</span></a></div>
+      </div>
+    </section>
+
+    <section class="section reviews-section page-shell" id="reviews">
+      <div class="reviews-head reveal"><div><div class="section-kicker">09 / MEMBER VOICES</div><h2 class="display">REAL PEOPLE.<br><em>REAL WORK.</em></h2></div><div class="rating-box"><strong>4.6</strong><div><span>★★★★★</span><small>127 Google reviews</small></div></div></div>
+      <div class="review-slider reveal delay-1">
+        <div class="review-track" id="reviewTrack">
+          <article class="review-card"><span class="quote">“</span><p>I recently joined Guru Gym and honestly, it has been a great experience so far. The environment is very motivating and pushes you to give your best.</p><footer>SIDDHARTH SHARMA <small>· Google Review</small></footer></article>
+          <article class="review-card"><span class="quote">“</span><p>I have been a regular of this gym for a very long time. Great place to workout, with all the necessary equipment and weights. The location is prime and the vibe is great.</p><footer>GOURAV KUMAR <small>· Google Local Guide</small></footer></article>
+          <article class="review-card"><span class="quote">“</span><p>At Guru Gym, the equipment and trainers help motivate and guide members towards their fitness goals. The atmosphere makes training feel purposeful.</p><footer>WAHIB NADEEM <small>· Google Local Guide</small></footer></article>
+        </div>
+        <div class="review-controls"><button id="reviewPrev" type="button" aria-label="Previous review">←</button><div class="review-dots" id="reviewDots"></div><button id="reviewNext" type="button" aria-label="Next review">→</button></div>
+      </div>
+    </section>
+
+    <section class="faq-section" id="faq">
+      <div class="page-shell faq-grid">
+        <div class="reveal"><div class="section-kicker">10 / FAQ</div><h2 class="display">QUESTIONS?<br><em>WE GOT YOU.</em></h2><p class="faq-intro">Everything you need before you decide to visit, enquire or start training.</p></div>
+        <div class="faq-list reveal delay-1">
+          <details open><summary>Where is Guru Gym located?<span>+</span></summary><p>3rd Floor, Thakur Bari Rd, SNP Area, Ambagan, Sakchi, Jamshedpur, Jharkhand 831001.</p></details>
+          <details><summary>What membership plans are available?<span>+</span></summary><p>Starter (1 month), Standard (3 months), Premium (6 months), Couple Special (3 months) and Ultimate (12 months).</p></details>
+          <details><summary>How do I enquire about membership?<span>+</span></summary><p>Use the membership buttons on this page or message the gym directly on WhatsApp. Your selected plan can be pre-filled for you.</p></details>
+          <details><summary>Can I see the gym before joining?<span>+</span></summary><p>Yes — use the visit/contact section to call the gym team or open the location in Google Maps.</p></details>
+          <details><summary>What should I bring?<span>+</span></summary><p>Your own towel and water bottle, plus a willingness to train consistently and follow the gym's safety guidelines.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section" id="contact">
+      <div class="cta-bg"></div><div class="cta-grid page-shell">
+        <div class="cta-main reveal"><div class="section-kicker">11 / READY?</div><h2 class="display">YOUR NEXT<br><em>REP STARTS HERE.</em></h2><p>Stop waiting for the perfect day. Start building the stronger version of you.</p><div class="cta-actions"><a class="button button-accent button-large magnetic" href="#pricing">START YOUR JOURNEY <span>→</span></a><a class="button button-glass button-large" href="https://wa.me/916206502611?text=Hi%20Guru%20Gym%2C%20I%20want%20to%20know%20about%20membership." target="_blank" rel="noopener">WHATSAPP <span>↗</span></a></div></div>
+        <div class="visit-card reveal delay-1"><span>COME TRAIN</span><h3>GURU GYM</h3><p>3rd Floor, Thakur Bari Rd,<br>SNP Area, Ambagan, Sakchi,<br>Jamshedpur, Jharkhand 831001</p><div class="visit-links"><a href="tel:+916206502611">☎ +91 6206 502611</a><a href="mailto:gurugymsakchi@gmail.com">✉ gurugymsakchi@gmail.com</a><a href="https://www.google.com/maps/search/?api=1&query=Guru+Gym+Sakchi+Jamshedpur" target="_blank" rel="noopener">OPEN GOOGLE MAPS ↗</a></div></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="page-shell footer-top"><a class="brand footer-brand" href="#home"><span class="brand-mark"><img src="assets/guru-gym-logo.png" alt="Guru Gym logo"></span><span class="brand-word"><strong>GURU</strong><b>GYM</b><small>BUILD · GRIND · BECOME</small></span></a><div class="footer-links"><a href="#about">About</a><a href="#programs">Training</a><a href="#gallery">Gallery</a><a href="#pricing">Membership</a><a href="#reviews">Reviews</a><a href="#contact">Visit</a>
+      <a href="gallery.html">Gallery</a></div><div class="footer-social"><a href="https://wa.me/916206502611" target="_blank" rel="noopener">WA</a><a href="tel:+916206502611">☎</a></div></div>
+    <div class="page-shell footer-bottom"><span>© 2026 Guru Gym. All rights reserved.</span><span>Sakchi, Jamshedpur · Jharkhand</span></div>
+  </footer>
+
+  <div class="mobile-action-bar" id="mobileActionBar"><a href="tel:+916206502611"><span>☎</span><small>CALL</small></a><a href="#pricing"><span>₹</span><small>PLANS</small></a><a class="primary" href="https://wa.me/916206502611?text=Hi%20Guru%20Gym%2C%20I%20want%20to%20know%20about%20membership." target="_blank" rel="noopener"><span>◉</span><small>WHATSAPP</small></a><a href="#contact"><span>⌖</span><small>VISIT</small></a></div>
+  <button class="back-top" id="backTop" type="button" aria-label="Back to top">↑</button>
+  <button class="install-app" id="installApp" type="button">INSTALL GURU GYM APP <span>+</span></button>
+
+  <div class="modal" id="joinModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-backdrop" data-close="true"></div>
+    <div class="modal-box">
+      <button class="modal-close" id="modalClose" type="button" aria-label="Close enquiry form">×</button>
+      <div class="modal-brand"><img src="assets/guru-gym-logo.png" alt=""><div><span>GURU GYM</span><small>MEMBERSHIP ENQUIRY</small></div></div>
+      <div class="modal-kicker">SELECTED PLAN</div>
+      <h2 id="modalTitle">LET'S GET<br><em>MOVING.</em></h2>
+      <div class="selected-plan" id="selectedPlan">Choose your membership plan.</div>
+      <form id="joinForm">
+        <div class="form-grid"><label>NAME<input id="name" required placeholder="Your name" autocomplete="name"></label><label>PHONE<input id="phone" required type="tel" inputmode="tel" placeholder="10-digit number" autocomplete="tel"></label></div>
+        <label>GOAL / PLAN<select id="modalPlan"><option>Starter Package — ₹1,100 + ₹600 registration</option><option>Standard Package — ₹2,700</option><option>Premium Package — ₹4,600</option><option>Couple Special — ₹4,000</option><option>Ultimate Package — ₹8,000</option><option>Personal Coaching enquiry</option></select></label>
+        <button class="button button-accent button-large" type="submit">SEND ON WHATSAPP <span>→</span></button>
+      </form>
+      <p class="modal-note">Your enquiry opens in WhatsApp with the details filled in. No payment is taken on this website.</p>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js" defer></script>
+</body>
+</html>

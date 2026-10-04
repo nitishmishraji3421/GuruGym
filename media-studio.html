@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#090b0b">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="Guru Gym Media Studio — manage gym photos, member moments, transformations and videos.">
+  <title>Media Studio · Guru Gym</title>
+  <link rel="icon" href="assets/guru-gym-logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/icon-192.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="media-studio.css">
+</head>
+<body>
+  <div class="ambient ambient-a" aria-hidden="true"></div>
+  <div class="ambient ambient-b" aria-hidden="true"></div>
+  <header class="studio-header">
+    <a class="studio-brand" href="index.html" aria-label="Back to Guru Gym home">
+      <span class="brand-mark"><img src="assets/guru-gym-logo.png" alt="Guru Gym logo"></span>
+      <span><strong>GURU</strong><b>GYM</b><small>MEDIA STUDIO</small></span>
+    </a>
+    <nav class="studio-nav" aria-label="Media studio navigation">
+      <a href="index.html">LIVE SITE</a>
+      <a href="gallery.html">GALLERY</a>
+      <a class="active" href="media-studio.html">OWNER STUDIO</a>
+      <a href="#library">LIBRARY</a>
+    </nav>
+    <div class="studio-auth-status"><span class="auth-dot"></span><small>OWNER MODE</small><button class="lock-btn" id="lockStudio" type="button">LOCK</button></div>
+    <button class="studio-menu" id="studioMenu" type="button" aria-label="Open menu">☰</button>
+  </header>
+
+  <div class="owner-gate" id="ownerGate" aria-hidden="false">
+    <div class="owner-gate-card">
+      <div class="owner-gate-mark"><img src="assets/guru-gym-logo.png" alt="Guru Gym logo"></div>
+      <span class="section-kicker">PRIVATE · OWNER ACCESS</span>
+      <h2>GURU GYM<br><em>MEDIA CONTROL.</em></h2>
+      <p>Upload, delete, organize, export and publish media from this private area.</p>
+      <form id="ownerLoginForm" autocomplete="off">
+        <label for="ownerPassword">OWNER PASSWORD</label>
+        <div class="owner-password-row"><input id="ownerPassword" type="password" inputmode="text" autocomplete="current-password" placeholder="Enter owner password" required><button class="primary-btn" type="submit">UNLOCK →</button></div>
+        <div class="owner-login-message" id="ownerLoginMessage" aria-live="polite"></div>
+      </form>
+      <small class="owner-security-note">Owner gate is a front-end access layer. For true secure owner authentication across devices, connect this Studio to a backend auth service.</small>
+    </div>
+  </div>
+
+  <main id="studioMain" aria-hidden="true">
+    <section class="studio-hero shell">
+      <div class="eyebrow">GURU GYM · OWNER TOOL</div>
+      <div class="hero-grid">
+        <div>
+          <h1>YOUR<br><em>GYM WALL.</em><br>ALWAYS FRESH.</h1>
+          <p>Drop in training photos, member moments, transformations, events and reels — then keep them organized in one cinematic, easy-to-use library.</p>
+          <div class="hero-actions">
+            <a class="primary-btn" href="#upload">ADD NEW MEDIA <span>↓</span></a>
+            <a class="ghost-btn" href="#library">VIEW LIBRARY <span>↘</span></a>
+          </div>
+        </div>
+        <div class="logo-orbit" aria-hidden="true">
+          <span class="orbit orbit-1"></span><span class="orbit orbit-2"></span>
+          <span class="orbit-dot orbit-dot-1"></span><span class="orbit-dot orbit-dot-2"></span>
+          <div class="orbit-logo"><img src="assets/guru-gym-logo.png" alt=""></div>
+          <div class="orbit-caption"><strong>BUILD · GRIND · BECOME</strong><span>MEDIA / 01</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="shell stats-row" aria-label="Media library stats">
+      <div><span>TOTAL</span><strong id="countAll">0</strong><small>saved here</small></div>
+      <div><span>PHOTOS</span><strong id="countPhotos">0</strong><small>visuals</small></div>
+      <div><span>VIDEOS</span><strong id="countVideos">0</strong><small>clips & reels</small></div>
+      <div><span>STORAGE</span><strong id="storageState">LOCAL</strong><small>this browser</small></div>
+    </section>
+
+    <section class="shell upload-section" id="upload">
+      <div class="section-intro">
+        <div><span class="section-kicker">01 / ADD MEDIA</span><h2>MAKE IT<br><em>LOOK ALIVE.</em></h2></div>
+        <p>Upload one or many files together. Add a category and a caption once, and the studio keeps everything sorted.</p>
+      </div>
+      <div class="upload-layout">
+        <label class="dropzone" id="dropzone">
+          <input id="fileInput" type="file" accept="image/*,video/*" multiple>
+          <span class="drop-icon">＋</span>
+          <strong>DROP PHOTOS OR VIDEOS HERE</strong>
+          <small>or tap to browse · JPG, PNG, WEBP, MP4, MOV, WEBM</small>
+          <span class="drop-badge">MULTI-UPLOAD</span>
+        </label>
+        <div class="upload-form">
+          <div class="field"><label for="category">CATEGORY</label>
+            <select id="category">
+              <option>Gym</option><option>Members</option><option>Transformations</option><option>Events</option><option>Reels</option><option>Trainers</option><option>Other</option>
+            </select>
+          </div>
+          <div class="field"><label for="caption">CAPTION / STORY</label><textarea id="caption" rows="4" placeholder="e.g. Evening strength session · Sakchi"></textarea></div>
+          <div class="field"><label for="featured">DISPLAY STYLE</label>
+            <select id="featured"><option value="standard">Standard card</option><option value="featured">Featured / hero</option></select>
+          </div>
+          <div class="field"><label for="visibility">PUBLIC GALLERY</label>
+            <select id="visibility"><option value="public">Visible to everyone</option><option value="private">Private · Owner only</option></select>
+          </div>
+          <button class="primary-btn full" id="saveMedia" type="button">SAVE TO GURU LIBRARY <span>→</span></button>
+          <button class="text-btn" id="clearQueue" type="button">CLEAR SELECTED FILES</button>
+          <div class="queue-status" id="queueStatus">No files selected. Published items appear in the public Gallery.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="shell library-section" id="library">
+      <div class="section-intro library-intro">
+        <div><span class="section-kicker">02 / MEDIA LIBRARY</span><h2>THE<br><em>GYM WALL.</em></h2></div>
+        <div class="library-controls">
+          <div class="filters" id="filters" role="tablist" aria-label="Filter media">
+            <button class="filter active" data-filter="all" type="button">ALL</button>
+            <button class="filter" data-filter="Gym" type="button">GYM</button>
+            <button class="filter" data-filter="Members" type="button">MEMBERS</button>
+            <button class="filter" data-filter="Transformations" type="button">TRANSFORM</button>
+            <button class="filter" data-filter="Events" type="button">EVENTS</button>
+            <button class="filter" data-filter="Reels" type="button">REELS</button>
+          </div>
+          <input id="searchMedia" class="search" type="search" placeholder="Search media…" aria-label="Search media">
+        </div>
+      </div>
+
+      <div class="library-toolbar">
+        <div class="results-copy"><strong id="resultsCount">0</strong><span> items showing</span></div>
+        <div class="toolbar-actions">
+          <button class="soft-btn" id="exportCatalog" type="button">EXPORT CATALOG</button>
+          <a class="soft-btn" href="gallery.html" target="_blank" rel="noopener">OPEN GALLERY</a>
+          <button class="danger-btn" id="clearLibrary" type="button">CLEAR LIBRARY</button>
+        </div>
+      </div>
+
+      <div class="empty-state" id="emptyState">
+        <div class="empty-mark">GG</div>
+        <h3>YOUR WALL IS WAITING.</h3>
+        <p>Upload the first Guru Gym moment and watch the library turn into a living brand archive.</p>
+        <a class="primary-btn" href="#upload">ADD FIRST MEDIA <span>↑</span></a>
+      </div>
+      <div class="media-grid" id="mediaGrid"></div>
+    </section>
+
+    <section class="shell workflow-section">
+      <div class="workflow-card">
+        <div><span class="section-kicker">03 / LIVE-SITE WORKFLOW</span><h2>FROM<br><em>PHONE TO BRAND.</em></h2></div>
+        <div class="workflow-steps">
+          <div><span>01</span><strong>CAPTURE</strong><p>Take a clean gym photo or short vertical clip.</p></div>
+          <div><span>02</span><strong>UPLOAD</strong><p>Drop it here, choose a category and add the story.</p></div>
+          <div><span>03</span><strong>CURATE</strong><p>Use filters and featured styling to plan the wall.</p></div>
+          <div><span>04</span><strong>PUBLISH</strong><p>Use the exported catalog with your live storage/backend.</p></div>
+        </div>
+      </div>
+      <p class="note">This page stores uploads locally in the current browser for instant preview and organization. For permanent multi-device publishing on the public website, connect this interface to cloud storage/backend authentication.</p>
+    </section>
+  </main>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" id="lightboxClose" type="button" aria-label="Close preview">×</button>
+    <div class="lightbox-media" id="lightboxMedia"></div>
+    <div class="lightbox-meta"><span id="lightboxCategory"></span><strong id="lightboxTitle"></strong><p id="lightboxCaption"></p></div>
+  </div>
+  <div class="toast" id="toast" aria-live="polite"></div>
+
+  <script src="media-studio.js"></script>
+</body>
+</html>

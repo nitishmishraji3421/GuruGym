@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#090b0b"><meta name="color-scheme" content="dark">
+<meta name="description" content="Guru Gym public gallery — training, members, events and gym moments.">
+<title>Guru Gym · Public Gallery</title>
+<link rel="icon" href="assets/guru-gym-logo.png" type="image/png"><link rel="apple-touch-icon" href="assets/icon-192.png"><link rel="manifest" href="manifest.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="public-gallery">
+  <div class="page-shell">
+    <header class="gallery-page-header">
+      <a href="index.html" class="brand" aria-label="Back to Guru Gym home"><span class="brand-mark"><img src="assets/guru-gym-logo.png" alt="Guru Gym logo"></span><span class="brand-word"><strong>GURU</strong><b>GYM</b><small>PUBLIC GALLERY</small></span></a>
+      <div class="gallery-header-actions"><a class="button button-outline" href="index.html">← HOME</a><a id="owner-access" class="button button-glass" href="media-studio.html">OWNER · ADD MEDIA <span>↗</span></a><a class="button button-accent" href="https://wa.me/916206502611?text=Hi%20Guru%20Gym%2C%20I%20want%20to%20know%20about%20membership." target="_blank" rel="noopener">JOIN GURU GYM ↗</a></div>
+    </header>
+    <div class="gallery-section-head reveal"><div><div class="section-kicker">GALLERY / 01</div><h1 class="display">THE GURU<br><em>GYM WALL.</em></h1></div><p>Gym sessions, member moments, transformations, events and reels — all the latest published Guru Gym media in one place.</p></div>
+    <div class="public-gallery-grid reveal delay-1" id="publicGalleryPageGrid"></div>
+    <div class="gallery-empty" id="publicGalleryEmpty" hidden><h3>NO PUBLIC MEDIA YET.</h3><p>The Guru Gym team will publish photos and videos here from the private Media Studio.</p><a class="button button-accent" href="index.html#pricing">SEE MEMBERSHIPS <span>→</span></a></div>
+    <div class="gallery-note gallery-note-spacing"><span><strong>EVERYONE CAN VIEW</strong> · Only media explicitly published by the owner appears here.</span><span><strong>OWNER</strong> · <a href="media-studio.html">Open private upload area →</a></span></div>
+  </div>
+</div>
+<script src="gallery.js"></script>
+<script>
+const ob=new IntersectionObserver(entries=>entries.forEach(e=>e.isIntersecting&&e.target.classList.add('visible')),{threshold:.08});document.querySelectorAll('.reveal').forEach(e=>ob.observe(e));
+</script>
+</body>
+</html>
